@@ -11,4 +11,4 @@ tokens = nltk.word_tokenize(sentence)
 
 tagged = nltk.pos_tag(tokens)
 
-print tagged[0:6]
+print tagged[]
