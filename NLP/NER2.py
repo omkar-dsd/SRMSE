@@ -31,15 +31,17 @@ def process_content():
             #pos tagging the tokenized words
             tagged = nltk.pos_tag(words)
             #special regex for chunk
+            namedEnt = nltk.ne_chunk(tagged, binary = True)
 
-            chunkGram = r"""Chunk: {<.*>+}
-            				Chink: }<VB.?|IN|DT>+{				""" #This is chinking part, which is negation of chunking.
-            #looking for regex pattern using pattern
-            chunkParser = nltk.RegexpParser(chunkGram)
-            #parsing the string
-            chunked = chunkParser.parse(tagged)
-            #drawing sentence
-            chunked.draw()     
+            namedEnt.draw()
+            # chunkGram = r"""Chunk: {<.*>+}
+            # 				}<VB.?|IN|DT>+{				""" #This is chinking part, which is negation of chunking.
+            # #looking for regex pattern using pattern
+            # chunkParser = nltk.RegexpParser(chunkGram)
+            # #parsing the string
+            # chunked = chunkParser.parse(tagged)
+            # #drawing sentence
+            # chunked.draw()     
 
 
     except Exception as e:
