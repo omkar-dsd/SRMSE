@@ -1,0 +1,17 @@
+<html>
+<form>
+	 Search:<br>
+	<input type = "text" name="search"><br>
+</form>
+<script type = "text/javascript">
+	function WriteToFile(passForm){
+		set fso = CreateObject("Scripting.FileSystemObject");
+		set s = fso.CreateTextFile("/home/omkar/SRMSE/NLP/cachedata.txt", true);
+		s.writeline(document.passForm.input1.value);
+		s.close();
+
+
+
+	}
+</script>
+</html>

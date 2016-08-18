@@ -7,6 +7,7 @@ import nltk
 from nltk.tokenize import PunktSentenceTokenizer
 from nltk.tokenize import sent_tokenize, word_tokenize
 from nltk.corpus import stopwords
+from nltk.stem import WordNetLemmatizer, PorterStemmer
 
 #enter 2 sentences
 sent1 = raw_input("Enter Sentence 1: ")
@@ -16,6 +17,9 @@ sent2 = raw_input("Enter Sentence 2: ")
 #this function removes the stop words and returns a fresh word tokenised list.
 def filteredSentence(sentence):
 
+	lemmatizer = WordNetLemmatizer()   #lemmatizes the words
+	ps = PorterStemmer()    #stemmer stems the root of the word.
+
 	stop_words = set(stopwords.words("english"))
 	words = word_tokenize(sentence)
 
@@ -23,7 +27,7 @@ def filteredSentence(sentence):
 
 	for w in words:
         	if w not in stop_words:
-                	filtered_sentence.append(w)
+                	filtered_sentence.append(lemmatizer.lemmatize(ps.stem(w)))
 	return filtered_sentence
 
 
@@ -32,6 +36,7 @@ filtered_sent2 = []
 
 filtered_sent1 = filteredSentence(sent1)
 filtered_sent2 = filteredSentence(sent2)
+
 
 
 sent3 = raw_input("Enter Query: ")
