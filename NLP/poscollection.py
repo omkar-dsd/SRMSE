@@ -1,3 +1,4 @@
+import nltk
 from bs4 import BeautifulSoup as bs
 # from pymongo import MongoClient
 from nltk.corpus import state_union
@@ -17,23 +18,24 @@ def  proxyHandler():
 
 proxyHandler()
 
-temp = "http://www.bbc.com/news"
+temp = "http://www.thehindu.com/"
 
 def getWebText(urltoopen):
 	url = urllib2.urlopen(urltoopen).read()
-	soup = bs(url)
+	soup = bs(url).encode("utf-8")
 
-	ptaglist = soup.findAll('a')
-	textList = []
-	for i in ptaglist:
-		textList.append(i.getText())
+	ptaglist = soup.find('a')
+	# textList = []
+	# for i in ptaglist:
+	# 	textList.append(i.getText())
 
-	return textList
+	return ptaglist
 
-theHindu = ''.join(getWebText(temp))
+theHindu = getWebText(temp)
+print theHindu
 
 tokens = nltk.word_tokenize(theHindu)
 tagged = nltk.pos_tag(tokens)
 
-print soup
+
 
