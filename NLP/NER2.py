@@ -20,7 +20,7 @@ sample_text = raw_input()
 #PunktSentenceTokenizer shou be a large file and it is used to create a learning text.
 custom_sent_tokenizer = PunktSentenceTokenizer(train_text)
 tokenized = custom_sent_tokenizer.tokenize(sample_text)
-#--------------------------
+#-------------------------- 
 
 
 def process_content():
