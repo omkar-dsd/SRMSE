@@ -1,0 +1,12 @@
+<!-- localhost:8000/music/-->
+
+{% if all_albums %}
+	<u1>
+
+		{% for album in all_albums %}
+			<li><a href="{% url 'music:detail' album.id %}">{{album.album_title}}</a>	</li>
+		{% endfor %}
+	</u1>
+{% else %}
+	<h3> You don't have any albums</h3>
+{% endif %}
