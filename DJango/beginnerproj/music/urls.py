@@ -6,15 +6,15 @@ from . import views, apps
 urlpatterns = [
 	
 	# /music/
-    url(r'^$', views.index, name = "index"),
+    url(r'^$', views.IndexView.as_view(), name = "index"),
 
 
 
     # /music/<album_id>/
-    url(r'^(?P<album_id>[0-9]+)/$', views.detail, name = "detail"),
+    url(r'^(?P<pk>[0-9]+)/$', views.DetailView.as_view(), name = "detail"),
 
 
-    # /music/album_id/favourite/
-    url(r'^(?P<album_id>[0-9]+)/favourite/$', views.favourite, name = "favourite"),
+    # # /music/album_id/favourite/
+    # url(r'^(?P<album_id>[0-9]+)/favourite/$', views.favourite, name = "favourite"),
 
 ]
