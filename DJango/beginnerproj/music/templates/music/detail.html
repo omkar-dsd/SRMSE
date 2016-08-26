@@ -4,7 +4,7 @@
 
 
 {% block body %}
-	<img src="{{album.album_logo}} style="width": 250px; ">
+	<img src="{{album.album_logo.url}}" style="width: 250px;">
 
 	<h1>{{album.album_title}}</h1>
 	<h2>{{album.artist}}</h2>
@@ -14,6 +14,12 @@
 		<p><strong>{{ error_message }}</strong>></p>>
 
 	{% endif %}
+
+	{% for song in album.song_set.all %}
+
+	<h4>{{ song.song_title }}</h4><br>
+
+	{% endfor %}
 {% endblock %}
 
 
