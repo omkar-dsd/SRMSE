@@ -1,0 +1,59 @@
+installing django:
+
+        sudo apt-get update
+        sudo apt-get install python-django
+
+check installation:
+		
+		django --version
+
+start project:
+
+		django-admin startproject project_name
+
+structure of project:
+
+		project_name
+			
+			project_name
+				__init__.py
+				settings.py
+				urls.py
+				wsgi.py
+
+
+			manage.py
+
+
+get inside project directory:
+
+		cd project_name
+
+Migrate for first time use:
+
+		python manage.py migrate
+
+Run server:
+
+		python manage.py runserver
+
+		(localhost:8000)
+
+start app:
+
+		python manage.py startapp app_name
+
+app structure:
+
+		migrations
+		admin.py
+		__init__.py
+		models.py
+		tests.py
+		views.py
+
+
+
+MakeMigrations:
+
+		python manage.py makemigration app_name
