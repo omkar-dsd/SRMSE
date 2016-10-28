@@ -1,0 +1,26 @@
+	
+	gets the keys and access tokens from apps.twitter.com
+
+
+	Consumer Key (API Key)	03ycPyPiPWBrB17GGq3LiWxiE
+
+	Consumer Secret (API Secret)	w4sTeDYmdL8OEVQYpVrICpgsV06CZGwebFSyOrNJL6McE0ri9S
+
+	Access Level	Read and write
+
+	Owner	omkar_dsd
+
+	Owner ID	2770722877
+
+
+
+
+	Access Token	2770722877-Z7GqeEB5APHMhBHalZjcR42dQhRJHY0TKj80Szv
+
+	Access Token Secret	5WrsjqYaCB6zLV08LUiAP94HZ5EuviDu2vj3joIwdByfL
+
+	Access Level	Read and write
+
+	Owner	omkar_dsd
+
+	Owner ID	2770722877

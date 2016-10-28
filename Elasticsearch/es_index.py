@@ -1,3 +1,5 @@
+#this code puts the document into the index of elasticsearch
+
 from datetime import datetime
 from elasticsearch import Elasticsearch
 

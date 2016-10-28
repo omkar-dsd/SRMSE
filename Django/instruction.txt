@@ -53,6 +53,26 @@ app structure:
 		views.py
 
 
+make installed app entry in settings.py:
+
+INSTALLED_APPS = (
+    'app_name.apps.App_nameConfig'
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+)
+
+
+
+make apps.py file in app_name directory:
+
+from django.apps import AppConfig
+
+class App_nameConfig(AppConfig):
+		name = 'app_name'
 
 MakeMigrations:
 
